@@ -14,3 +14,12 @@ Q. What is Ansible?
 ### **Ansible Architecture:**
 
 ![Image](ansibleArch.drawio.png)
+
+### **Installing Ansible in ubuntu:**
+
+```
+$ sudo apt update
+$ sudo apt install software-properties-common
+$ sudo add-apt-repository --yes --update ppa:ansible/ansible
+$ sudo apt install ansible
+```
