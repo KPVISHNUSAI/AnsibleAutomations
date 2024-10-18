@@ -100,4 +100,5 @@ Q. What is Inventory in Ansible?
     ansible 'web*' -m ping -i inventory
    ```
 - Responses of the above ping commands
-![Image](Screenshot 2024-10-18 232537.png)
+  ![Image](pingoutput.png)
+
