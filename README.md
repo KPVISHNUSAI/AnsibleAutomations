@@ -24,6 +24,10 @@ $ sudo add-apt-repository --yes --update ppa:ansible/ansible
 $ sudo apt install ansible
 ```
 
+### **Web appliaction Infrastructure in AWS**
+![Image](ec2instances.drawio.png)
+
+
 Q. What is Inventory in Ansible?
 - In Ansible, the inventory file is a key component that defines the hosts (i.e., servers or nodes) where the Ansible automation tasks are to be executed. It lists all the managed nodes and groups them for easier task management. The inventory file can include hostnames, IP addresses, or groups of hosts, and it's used to tell Ansible where to run the playbooks.
 
@@ -86,4 +90,14 @@ Q. What is Inventory in Ansible?
         ansible_user: ec2-user
         ansible_ssh_private_key_file: clientkey.pem 
   ```
-- 
+### **Ping from control to all the servers**
+- The following are the ping commands in ansible
+   ```
+    ansible dbservers -m ping -i inventory
+    ansible webservers -m ping -i inventory
+    ansible dc_oregon -m ping -i inventory
+    ansible all -m ping -i inventory
+    ansible 'web*' -m ping -i inventory
+   ```
+- Responses of the above ping commands
+![Image](Screenshot 2024-10-18 232537.png)
