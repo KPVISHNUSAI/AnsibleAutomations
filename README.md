@@ -102,3 +102,14 @@ Q. What is Inventory in Ansible?
 - Responses of the above ping commands
   ![Image](pingoutput.png)
 
+Q. Difference between Configuration Management & Scripting 🤔?
+- The best answer for it is Configuration Management tools are ***Idempotent***, i.e., If a target is different state then only it apply the change other wise it doesn't apply changes and scripts and commands are also not going to fail.
+
+
+###  **Some Ad Hoc commands:**
+```
+ansible webservers -m ansible.builtin.service -a "name=httpd state=started enabled=yes" -i inventory --become
+ansible webservers -m ansible.builtin.copy -a "src=index.html dest=/var/www/html/index.html" -i inventory --become
+```
+- here ***--become*** helps to check the state and applys the changes accordingly
+
